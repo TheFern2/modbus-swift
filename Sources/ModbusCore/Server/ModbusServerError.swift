@@ -1,7 +1,5 @@
 // SPDX-License-Identifier: Apache-2.0
 
-import ModbusCore
-
 // MARK: - ModbusServerError
 
 /// Errors from server data store operations.

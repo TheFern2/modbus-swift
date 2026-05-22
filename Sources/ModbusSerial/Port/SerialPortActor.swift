@@ -99,6 +99,16 @@ public actor SerialPortActor {
         return response
     }
 
+    /// Reads bytes from the serial port.
+    public func read(maxBytes: Int, timeout: Duration) async throws(SerialPortError) -> [UInt8] {
+        try await port.read(maxBytes: maxBytes, timeout: timeout)
+    }
+
+    /// Writes bytes to the serial port.
+    public func write(_ bytes: [UInt8], timeout: Duration) async throws(SerialPortError) {
+        try await port.write(bytes, timeout: timeout)
+    }
+
     /// Flushes buffers.
     public func flush() async throws(SerialPortError) {
         try await port.flush()

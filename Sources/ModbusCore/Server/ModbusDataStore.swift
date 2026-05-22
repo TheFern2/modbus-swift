@@ -45,13 +45,13 @@ public protocol ModbusDataStore: Sendable {
 // MARK: - UnitData
 
 /// Per-unit address space storage.
-struct UnitData: Sendable {
-    var holdingRegisters: [UInt16]
-    var inputRegisters: [UInt16]
-    var coils: [Bool]
-    var discreteInputs: [Bool]
+public struct UnitData: Sendable {
+    public var holdingRegisters: [UInt16]
+    public var inputRegisters: [UInt16]
+    public var coils: [Bool]
+    public var discreteInputs: [Bool]
 
-    init(registerCount: Int, coilCount: Int) {
+    public init(registerCount: Int, coilCount: Int) {
         holdingRegisters = [UInt16](repeating: 0, count: registerCount)
         inputRegisters = [UInt16](repeating: 0, count: registerCount)
         coils = [Bool](repeating: false, count: coilCount)
