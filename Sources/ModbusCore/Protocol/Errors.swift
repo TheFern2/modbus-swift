@@ -21,4 +21,6 @@ public enum PDUError: Error, Equatable, Sendable {
     case invalidFileReferenceType(UInt8)
     /// Record data length must be even (multiple of 2 bytes per word)
     case oddRecordDataLength(Int)
+    /// Invalid coil value in request (must be 0xFF00 or 0x0000)
+    case illegalCoilValue(UInt16)
 }

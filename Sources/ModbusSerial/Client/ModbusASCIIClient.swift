@@ -580,7 +580,8 @@ public final class ModbusASCIIClient: Sendable {
             .modbusException(ModbusException(rawValue: code) ?? .slaveDeviceFailure)
         case .invalidMEIType,
              .invalidFileReferenceType,
-             .oddRecordDataLength:
+             .oddRecordDataLength,
+             .illegalCoilValue:
             .frameDecodingFailed("\(error)")
         }
     }

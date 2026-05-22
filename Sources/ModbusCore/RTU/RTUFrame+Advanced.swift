@@ -150,7 +150,8 @@ public func parseRTUReadWriteMultipleRegistersResponse(
         case .unknownException,
              .invalidMEIType,
              .invalidFileReferenceType,
-             .oddRecordDataLength:
+             .oddRecordDataLength,
+             .illegalCoilValue:
             throw .exceptionResponse(.illegalFunction)
         }
     }
@@ -277,7 +278,8 @@ public func parseRTUReadFIFOQueueResponse(
         case .unknownException,
              .invalidMEIType,
              .invalidFileReferenceType,
-             .oddRecordDataLength:
+             .oddRecordDataLength,
+             .illegalCoilValue:
             throw .exceptionResponse(.illegalFunction)
         }
     }

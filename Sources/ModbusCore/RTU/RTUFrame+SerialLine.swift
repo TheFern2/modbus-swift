@@ -105,7 +105,8 @@ public func parseRTUReadExceptionStatusResponse(
              .byteCountMismatch,
              .invalidMEIType,
              .invalidFileReferenceType,
-             .oddRecordDataLength:
+             .oddRecordDataLength,
+             .illegalCoilValue:
             throw .exceptionResponse(.illegalFunction)
         }
     }
@@ -229,7 +230,8 @@ public func parseRTUDiagnosticsResponse(
              .byteCountMismatch,
              .invalidMEIType,
              .invalidFileReferenceType,
-             .oddRecordDataLength:
+             .oddRecordDataLength,
+             .illegalCoilValue:
             throw .exceptionResponse(.illegalFunction)
         }
     }
@@ -349,7 +351,8 @@ public func parseRTUGetCommEventCounterResponse(
              .byteCountMismatch,
              .invalidMEIType,
              .invalidFileReferenceType,
-             .oddRecordDataLength:
+             .oddRecordDataLength,
+             .illegalCoilValue:
             throw .exceptionResponse(.illegalFunction)
         }
     }
@@ -472,7 +475,8 @@ public func parseRTUGetCommEventLogResponse(
              .byteCountMismatch,
              .invalidMEIType,
              .invalidFileReferenceType,
-             .oddRecordDataLength:
+             .oddRecordDataLength,
+             .illegalCoilValue:
             throw .exceptionResponse(.illegalFunction)
         }
     }

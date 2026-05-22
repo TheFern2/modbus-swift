@@ -95,7 +95,8 @@ public func parseRTUDeviceIdentificationResponse(
         case .unknownException,
              .invalidMEIType,
              .invalidFileReferenceType,
-             .oddRecordDataLength:
+             .oddRecordDataLength,
+             .illegalCoilValue:
             throw .exceptionResponse(.illegalFunction)
         }
     }
@@ -212,7 +213,8 @@ public func parseRTUReportServerIdResponse(
         case .unknownException,
              .invalidMEIType,
              .invalidFileReferenceType,
-             .oddRecordDataLength:
+             .oddRecordDataLength,
+             .illegalCoilValue:
             throw .exceptionResponse(.illegalFunction)
         }
     }
